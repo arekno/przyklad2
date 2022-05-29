@@ -1,0 +1,39 @@
+• import numpy as np 
+
+• import pandas as pd 
+
+• import matplotlib.pyplot as plt 
+
+•   
+
+• df = pd.read_excel('turystyka1.xlsx', header=None) 
+
+• # print(df) 
+
+• dfT = df.transpose() 
+
+• print(dfT) 
+
+•   
+
+• print(dfT.columns) 
+
+• dfT.columns = ['kategoria hotelu', 'rok', 'ilosc'] 
+
+•   
+
+• df1 = dfT[dfT['rok'] == '2015'] 
+
+• df2 = dfT[dfT['rok'] == '2018'] 
+
+•   
+
+• labels = df1['kategoria hotelu'] 
+
+• sizes = df1['ilosc'] 
+
+• # wykres 1 
+
+• plt.pie(sizes, labels=labels) 
+
+• plt.show()
